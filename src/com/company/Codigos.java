@@ -1,21 +1,21 @@
 package com.company;
 
-public class Codigos {
-    public void bubblesort(int[] array){
+import java.util.PriorityQueue;
 
-        Long start = System.nanoTime();
-        for (int i = 0; i < array.length; i++){
-            long time = System.nanoTime() - start;
-            for (int j =0; j< array.length; j++){
-                if (array[j] < array[i]) {
-                    int a = array[j];
-                    array[i] = array[j];
-                    array[j] = a;
-                }
-            }
+public class Codigos {
+    public void heapsort(){
+ int[] a = new int[10];
+ long start = System.currentTimeMillis();
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+
+        for (int Array1 : a){
+            queue.add(Array1);
         }
-        Long time = System.nanoTime() - start;
-        System.out.println("El tiempo en ejecutarse en bubble sort es: " + time + " mili segundos");
+        for (int i = 0; !queue.isEmpty(); i++){
+            a[i] = queue.remove();
+        }
+        long end = System.currentTimeMillis();
+        System.out.println(" El Heapsort tarda en ejecutarse: " + (end - start) + " milisegundos ");
 
     }
 
@@ -72,5 +72,6 @@ public class Codigos {
 
     return mergesort(recursionMergesort(inf), recursionMergesort(sup));
     }
+
 
 }

@@ -11,19 +11,19 @@ public class Main {
         Codigos a = new Codigos();
 
         int[] arreglo;
-        arreglo = new int[12345];
+        arreglo = new int[111219];
 
-        //Tiempo para el Bubble
-        a.bubblesort(arreglo);
+        //Tiempo para el Heapsort
+        a.heapsort();
 
         //Tiempo para el merge
 
        int[] array = new int[10];
-        long StartTime = System.nanoTime();
+        long StartTime = System.currentTimeMillis();
        array = a.recursionMergesort(arreglo);
-       long endTime = System.nanoTime() - StartTime;
+       long endTime = System.currentTimeMillis() - StartTime;
 
-        System.out.println("el tiempo en ejecutarse es " + endTime);
+        System.out.println(" El mergesort tarda en ejecutarse: " + endTime + " Milisegundos ");
 
     }
 
